@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "407850909091",
+    "project_id": "classmatesapp-4cdf6",
+    "storage_bucket": "classmatesapp-4cdf6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:407850909091:android:ee3f738410f34b38016e16",
+        "android_client_info": {
+          "package_name": "com.example.classmatesapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "407850909091-n40782ukf9i0309sgbqp10gto5l8g2m9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDo0Pt5m-U-YelsZ8bhQOqCjgHBdO8IiFg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "407850909091-n40782ukf9i0309sgbqp10gto5l8g2m9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

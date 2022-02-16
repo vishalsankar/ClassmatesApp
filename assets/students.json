@@ -1,0 +1,56 @@
+{
+  "students": [
+    {
+      "name":"Vishal Sankar",
+      "college":"VIT Chennai",
+      "year":"2nd",
+      "dept":"CSE",
+      "badges": {"Skill": ["C++","Python"],"Awards": "Award","Jobs": "Intern"}
+    },
+    {
+      "name":"Susan Ray",
+      "college":"VIT Chennai",
+      "year":"2nd",
+      "dept":"CSE",
+      "badges": {"Skill": ["C++","Ruby"],"Awards": "Award","Jobs": "Intern"}
+
+    },
+    {
+      "name":"Sudeeksha Gangli",
+      "college":"VIT Chennai",
+      "year":"2nd",
+      "dept":"CSE",
+      "badges": {"Skill": ["Python"],"Awards": "Award","Jobs": "Intern"}
+    },
+    {
+      "name":"Atharva Umbre",
+      "college":"NIT Trichy",
+      "year":"2nd",
+      "dept":"CSE with AI",
+      "badges": {"Skill": ["Python"],"Awards": "Award","Jobs": "Intern"}
+
+    },
+    {
+      "name":"Amrita Visalam",
+      "college":"NIT Trichy",
+      "year":"2nd",
+      "dept":"CSE with AI",
+      "badges": {"Skill": ["Dart","Python"],"Awards": "Award","Jobs": "Intern"}
+
+    },
+    {
+      "name":"Sana Khan",
+      "college":"IIT Delhi",
+      "year":"2nd",
+      "dept":"CSE",
+      "badges": {"Skill": ["Java","Python"],"Awards": "Award","Jobs": "Intern"}
+    },
+    {
+      "name":"Ankit Kumar",
+      "college":"Chandigarh University",
+      "year":"2nd",
+      "dept":"CSE",
+      "badges": {"Skill": ["Python"],"Awards": "Award","Jobs": "Intern"}
+    }
+  ]
+}
