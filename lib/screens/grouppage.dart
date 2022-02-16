@@ -162,61 +162,83 @@ class _GroupPageState extends State<GroupPage> {
                     ),
                     MaterialButton(
                       onPressed: () {
-
-                        if (widget.collegeName ==
-                            Provider.of<Profile>(context,listen: false).getCollegeName) {
-                          final skill = [];
-                          String award = '';
-                          String jobs = '';
-                          for (int i = 0;
-                              i <
-                                  Provider.of<Profile>(context, listen: false)
-                                      .badges
-                                      .length;
-                              i++) {
-                            if (Provider.of<Profile>(context, listen: false)
-                                    .badges[i]
-                                    .backgroundColor ==
-                                Colors.green) {
-                              skill.add(
-                                  Provider.of<Profile>(context, listen: false)
-                                      .badgesDesc[i]);
-                            } else if (Provider.of<Profile>(context,
-                                        listen: false)
-                                    .badges[i]
-                                    .backgroundColor ==
-                                Colors.yellow) {
-                              award =
-                                  Provider.of<Profile>(context, listen: false)
-                                      .badgesDesc[i];
-                            } else {
-                              jobs =
-                                  Provider.of<Profile>(context, listen: false)
-                                      .badgesDesc[i];
+                        if (Provider.of<Profile>(context).badges.isNotEmpty) {
+                          if (widget.collegeName ==
+                              Provider.of<Profile>(context, listen: false)
+                                  .getCollegeName) {
+                            final skill = [];
+                            String award = '';
+                            String jobs = '';
+                            for (int i = 0;
+                                i <
+                                    Provider.of<Profile>(context, listen: false)
+                                        .badges
+                                        .length;
+                                i++) {
+                              if (Provider.of<Profile>(context, listen: false)
+                                      .badges[i]
+                                      .backgroundColor ==
+                                  Colors.green) {
+                                skill.add(
+                                    Provider.of<Profile>(context, listen: false)
+                                        .badgesDesc[i]);
+                              } else if (Provider.of<Profile>(context,
+                                          listen: false)
+                                      .badges[i]
+                                      .backgroundColor ==
+                                  Colors.yellow) {
+                                award =
+                                    Provider.of<Profile>(context, listen: false)
+                                        .badgesDesc[i];
+                              } else {
+                                jobs =
+                                    Provider.of<Profile>(context, listen: false)
+                                        .badgesDesc[i];
+                              }
                             }
+                            final nstd = Student(
+                                Provider.of<Profile>(context, listen: false)
+                                    .getName,
+                                Provider.of<Profile>(context, listen: false)
+                                    .getCollegeName,
+                                Provider.of<Profile>(context, listen: false)
+                                    .getYear,
+                                Provider.of<Profile>(context, listen: false)
+                                    .getDept,
+                                skill,
+                                award,
+                                jobs);
+                            setState(() {
+                              if (widget.student[(widget.student.length - 1)]
+                                      .name ==
+                                  nstd.name) {
+                                widget.student
+                                    .removeAt(widget.student.length - 1);
+                                widget.student.add(nstd);
+                              } else {
+                                widget.student.add(nstd);
+                              }
+                            });
+                          } else {
+                            showFlash(
+                              context: context,
+                              duration: const Duration(milliseconds: 2000),
+                              builder: (context, controller) {
+                                return Flash(
+                                  controller: controller,
+                                  behavior: FlashBehavior.floating,
+                                  position: FlashPosition.bottom,
+                                  boxShadows: kElevationToShadow[4],
+                                  horizontalDismissDirection:
+                                      HorizontalDismissDirection.horizontal,
+                                  child: FlashBar(
+                                    content: const Text("Not Same College"),
+                                  ),
+                                );
+                              },
+                            );
                           }
-                          final nstd = Student(
-                              Provider.of<Profile>(context, listen: false)
-                                  .getName,
-                              Provider.of<Profile>(context, listen: false)
-                                  .getCollegeName,
-                              Provider.of<Profile>(context, listen: false)
-                                  .getYear,
-                              Provider.of<Profile>(context, listen: false)
-                                  .getDept,
-                              skill,
-                              award,
-                              jobs);
-                          setState(() {
-                            if(widget.student[(widget.student.length-1)].name==nstd.name){
-                              widget.student.removeAt(widget.student.length-1);
-                              widget.student.add(nstd);
-                            }else {
-                              widget.student.add(nstd);
-                            }
-                          });
-                        }
-                        else{
+                        }else{
                           showFlash(
                             context: context,
                             duration: const Duration(milliseconds: 2000),
@@ -229,8 +251,7 @@ class _GroupPageState extends State<GroupPage> {
                                 horizontalDismissDirection:
                                 HorizontalDismissDirection.horizontal,
                                 child: FlashBar(
-                                  content:
-                                  const Text("Not Same College"),
+                                  content: const Text("Add atleast one badge of all kind"),
                                 ),
                               );
                             },
