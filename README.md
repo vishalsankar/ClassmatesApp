@@ -1,4 +1,4 @@
-# classmatesapp
+# Classmatesapp
 
 AthenaSquare Intern App
 
