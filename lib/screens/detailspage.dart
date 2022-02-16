@@ -1,4 +1,3 @@
-import 'package:classmatesapp/screens/landingscreen.dart';
 import 'package:classmatesapp/screens/loginpage.dart';
 import 'package:classmatesapp/widgets/authbutton.dart';
 import 'package:flutter/material.dart';
@@ -121,7 +120,7 @@ class _DetailsPageState extends State<DetailsPage> {
                           Navigator.pushAndRemoveUntil(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => LoginPage(),
+                                builder: (context) => const LoginPage(),
                               ),
                               (Route<dynamic> route) => false);
                         },
