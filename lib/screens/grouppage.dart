@@ -162,7 +162,7 @@ class _GroupPageState extends State<GroupPage> {
                     ),
                     MaterialButton(
                       onPressed: () {
-                        if (Provider.of<Profile>(context).badges.isNotEmpty) {
+                        if (Provider.of<Profile>(context,listen: false).badges.isNotEmpty) {
                           if (widget.collegeName ==
                               Provider.of<Profile>(context, listen: false)
                                   .getCollegeName) {
